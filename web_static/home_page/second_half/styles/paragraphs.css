@@ -1,0 +1,132 @@
+.horizontal_container{
+	overflow: hidden;
+}
+@keyframes feature_container_anm {
+	0% {
+		transform: scale(0, .05);
+	}
+	50% {
+		transform: scale(1, .05);
+	}
+}
+@keyframes title_1_anm {
+	50% {
+		translate: 0 -50%;
+	}
+}
+#octo_features_container{
+	display: grid;
+	margin-left: 4%;
+	margin-right: 4%;
+	margin-top: 5%;
+	margin-top: 100vh;
+	margin-bottom: 50vh;
+	padding-bottom: 5%;
+	height: 60vh;
+	width: auto;
+	overflow: visible;
+	border-block-end: 5px dashed #472f54;
+	display: inline-block;
+	.title_1 {
+			height: 7%;
+			width: auto;
+			font-size: 200%;
+			font-weight: 600;
+			text-align: center;
+			color: #d5ccda;
+			margin-bottom: 3%;
+			margin-top: 0%;
+			&.animation {
+				@media (prefers-reduced-motion: no-preference) {
+					animation: title_1_anm 3s infinite;
+				}
+				
+			}
+		}
+	
+	.feature_container {
+		margin-top: 2.5%;
+		margin-bottom: 2.5%;
+		border-radius: 100vw;
+		border: .25vw solid #1d002c;
+		display: flex;
+		height: 26%;
+		overflow: visible;
+		background-color: #1d002c;
+		background-image: linear-gradient(to right, #331054, #331941);
+		img {
+			width: 25%;
+		}
+		p {
+			color: antiquewhite;
+			margin-top: 1.5%;
+			width: 70%;
+			font-size: 125%;
+			word-break: keep-all;
+		}
+		&.animation {
+			@media (prefers-reduced-motion: no-preference) {
+				animation-name: feature_container_anm;
+				animation-duration: 0.5s;
+				animation-iteration-count: 1;
+			}
+		}
+		&:hover{
+			scale: 1.2;
+		}
+	}
+	.horizontal_container{
+		display: flex;
+		padding-left: 2%;
+		padding-right: 2%;
+		padding-bottom: 1%;
+		height: 90%;
+		#FC1 {transform: translateX(10%);}
+		#FC2 {transform: translateX(5%);}
+		#FC3 {transform: translateX(10%);}
+		#left_container {
+			height: 100%;
+			width: 32.5%;
+			.feature_container{
+				img {padding-right: 1%;}
+			}
+		}
+		#middle_container {
+			height: 95%;
+			width: 35%;
+			overflow: visible;
+			.features_octopus {
+				width: auto;
+				max-width: 100%;
+				max-height: 100%;
+				height: auto;
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+				margin-bottom: auto;
+				margin-top: auto;
+				transform: translateY(3%);
+				&:hover {
+					@media (prefers-reduced-motion: no-preference) {
+						transform: translateY(8%);
+					}
+				}
+				&.animation {
+					@media (prefers-reduced-motion: no-preference) {
+						transition: opacity 1.5s ease, transform 1.5s ease;
+					}
+				}
+			}
+		}
+		#right_container {
+			height: 100%;
+			width: 32.5%;
+			scale: -1 1;
+			.feature_container{
+				img {padding-left: 1%;scale: -1 1;}
+				p {text-align: right;scale: -1 1;}
+			}
+		}
+	}
+	
+}

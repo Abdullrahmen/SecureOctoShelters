@@ -1,4 +1,4 @@
-.HM_SH {
+#HM_SH {
 	width: 94%;
 	height: 100%;
 	padding-left: 3%;
@@ -6,6 +6,6 @@
 	padding-right: 3%;
 	padding-bottom: 0%;
 	margin: 0 0;
-	background-color: #1d002c;
+	background-image: linear-gradient(#1d002c, #331941);
 	font-family: 'Raleway', sans-serif;
 }
