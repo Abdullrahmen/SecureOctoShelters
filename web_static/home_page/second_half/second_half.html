@@ -11,22 +11,74 @@
 	<!--Links and scripts-->
 	<link rel="stylesheet" type="text/css" href="second_half/styles/common.css">
 	<link rel="stylesheet" type="text/css" href="second_half/styles/footer.css">
-	<link rel="stylesheet" type="text/css" href="second_half/styles/paragraphs.css">
+	<link rel="stylesheet" type="text/css" href="second_half/styles/octopus_features.css">
 	<link rel="stylesheet" type="text/css" href="second_half/styles/security_check.css">
+	<link rel="stylesheet" type="text/css" href="second_half/styles/animations.css">
+	<link rel="stylesheet" type="text/css" href="second_half/styles/latest_news.css">
 	<script src="second_half/app.js"></script>
 </head>
 
 <!--Home page - Second half-->
 <div id="HM_SH">
 	<!--Security check search and results-->
-	<section id="security_check_search">
-		<p class="search_title">Website Security Check - SOS</p>
-		<div class="input_container">
-			<input class="input" type="text" placeholder="Website domain">
+	<section id="security_check">
+		<div id="security_check_search">
+			<p class="search_title">Website Security Check - SOS</p>
+			<form class="input_container">
+				<input class="input" type="text" placeholder="Website domain">
+				<input id="search_button" type="button" value="" onclick="security_check_submit()">
+			</form>
 		</div>
+		<div id="security_check_loading">
+			<div class="dash one"></div>
+			<div class="dash two"></div>
+			<div class="dash three"></div>
+			<div class="dash four"></div>
+		</div>
+		<div id="security_check_results"></div>
 	</section>
-	<div id="security_check_results">
-	</div>
+	
+	<!--Latest News-->
+	<section id="latest_news_container">
+		<li>
+			<h2>01</h2>
+			<h3>Title 1</h3>
+			<p>
+				Lorem Ipsum is simply dummy text of the printing and typesetting
+				industry. Lorem Ipsum has been the industry's standard dummy text ever
+				since the 1500s.
+			</p>
+			<button>Read more</button>
+		</li>
+		<li>
+			<h2>02</h2>
+			<h3>Title 2</h3>
+			<p>
+				When an unknown printer took a galley of type and scrambled it to make
+				a type specimen book. It has survived not only five centuries.
+			</p>
+			<button>Read more</button>
+		</li>
+		<li>
+			<h2>03</h2>
+			<h3>Title 3</h3>
+			<p>
+				But also the leap into electronic typesetting, remaining essentially
+				unchanged. It was popularised in the 1960s.
+			</p>
+			<button>Read more</button>
+		</li>
+		<li>
+			<h2>04</h2>
+			<h3>Title 4</h3>
+			<p>
+				With the release of Letraset sheets containing Lorem Ipsum passages,
+				and more recently with desktop publishing software like Aldus PageMaker
+				including versions of Lorem Ipsum.
+			</p>
+			<button>Read more</button>
+		</li>
+	</section>
 
 	<!--Octopus features-->
 	<section id="octo_features_container">
@@ -36,15 +88,21 @@
 			<div id="left_container" class="horizontal_element">
 				<div class="feature_container" id="FC1">
 					<img src="second_half/styles/images/firewall-svgrepo-com.svg">
-					<p><b>Network Firewalls</b><br><font size="-1">Real-time firewall threat detection service safeguards network integrity.</font></p>
+					<p><b>Network Firewalls</b><br><font size="-1">
+						Real-time firewall threat detection service safeguards network integrity.
+					</font></p>
 				</div>
 				<div class="feature_container" id="FC2">
 					<img src="second_half/styles/images/network-transmit-svgrepo-com.svg">
-					<p><b>Network behavior</b><br><font size="-1">Network behavior anomaly detection.</font></p>
+					<p><b>Network behavior</b><br><font size="-1">
+						Network behavior anomaly detection.
+					</font></p>
 				</div>
 				<div class="feature_container" id="FC3">
 					<img src="second_half/styles/images/security-scan-svgrepo-com.svg">
-					<p><b>Malware Analyst</b><br><font size="-1">Malware detection service safeguards websites from malicious software.</font></p>
+					<p><b>Malware Analyst</b><br><font size="-1">
+						Malware detection service safeguards websites from malicious software.
+					</font></p>
 				</div>
 			</div>
 			<div id="middle_container" class="horizontal_element">
@@ -53,15 +111,21 @@
 			<div id="right_container" class="horizontal_element">
 				<div class="feature_container" id="FC1">
 					<img src="second_half/styles/images/ddos-protection-svgrepo-com.svg">
-					<p><b>DDoS mitigation</b><br><font size="-1">DDoS mitigation service protects websites from malicious traffic.</font></p>
+					<p><b>DDoS mitigation</b><br><font size="-1">
+						DDoS mitigation service protects websites from malicious traffic.</font></p>
 				</div>
 				<div class="feature_container" id="FC2">
 					<img src="second_half/styles/images/router-svgrepo-com.svg">
-					<p><b>SD-WAN Security</b><br><font size="-1">SD-WAN security service enhances website protection and performance.</font></p>
+					<p><b>SD-WAN Security</b><br><font size="-1">
+						SD-WAN security service enhances website protection and performance.
+					</font></p>
 				</div>
 				<div class="feature_container" id="FC3">
 					<img src="second_half/styles/images/network-wired-svgrepo-com.svg">
-					<p><b>Network Access control</b><br><font size="-1">Network access control service secures website connections and data.</font></p>
+					<p><b>Network Access control</b><br><font size="-1">
+						Network access control service secures website connections and data.
+					</font>
+					</p>
 				</div>
 			</div>
 		</div>

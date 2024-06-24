@@ -1,31 +1,12 @@
-.horizontal_container{
-	overflow: hidden;
-}
-@keyframes feature_container_anm {
-	0% {
-		transform: scale(0, .05);
-	}
-	50% {
-		transform: scale(1, .05);
-	}
-}
-@keyframes title_1_anm {
-	50% {
-		translate: 0 -50%;
-	}
-}
 #octo_features_container{
 	display: grid;
 	margin-left: 4%;
 	margin-right: 4%;
 	margin-top: 5%;
-	margin-top: 100vh;
-	margin-bottom: 50vh;
-	padding-bottom: 5%;
+	margin-bottom: 150vh;
 	height: 60vh;
 	width: auto;
 	overflow: visible;
-	border-block-end: 5px dashed #472f54;
 	display: inline-block;
 	.title_1 {
 			height: 7%;
@@ -54,6 +35,7 @@
 		overflow: visible;
 		background-color: #1d002c;
 		background-image: linear-gradient(to right, #331054, #331941);
+		transition: scale 0.2s;
 		img {
 			width: 25%;
 		}
@@ -66,9 +48,7 @@
 		}
 		&.animation {
 			@media (prefers-reduced-motion: no-preference) {
-				animation-name: feature_container_anm;
-				animation-duration: 0.5s;
-				animation-iteration-count: 1;
+				animation: feature_container_anm 0.75s 1;
 			}
 		}
 		&:hover{
@@ -100,6 +80,7 @@
 				max-width: 100%;
 				max-height: 100%;
 				height: auto;
+				opacity: 0;
 				display: block;
 				margin-left: auto;
 				margin-right: auto;
@@ -113,7 +94,9 @@
 				}
 				&.animation {
 					@media (prefers-reduced-motion: no-preference) {
+						opacity: 0;
 						transition: opacity 1.5s ease, transform 1.5s ease;
+						opacity: 1;
 					}
 				}
 			}
