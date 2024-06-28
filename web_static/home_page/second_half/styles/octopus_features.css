@@ -3,34 +3,25 @@
 	margin-left: 4%;
 	margin-right: 4%;
 	margin-top: 5%;
-	margin-bottom: 150vh;
-	height: 60vh;
+	margin-bottom: 7vh;
+	height: auto;
 	width: auto;
 	overflow: visible;
-	display: inline-block;
 	.title_1 {
-			height: 7%;
-			width: auto;
-			font-size: 200%;
-			font-weight: 600;
-			text-align: center;
-			color: #d5ccda;
-			margin-bottom: 3%;
-			margin-top: 0%;
 			&.animation {
 				@media (prefers-reduced-motion: no-preference) {
 					animation: title_1_anm 3s infinite;
 				}
-				
 			}
 		}
 	
 	.feature_container {
 		margin-top: 2.5%;
+		flex-wrap: wrap;
 		margin-bottom: 2.5%;
 		border-radius: 100vw;
 		border: .25vw solid #1d002c;
-		display: flex;
+		display: inline-flex;
 		height: 26%;
 		overflow: visible;
 		background-color: #1d002c;
@@ -56,7 +47,6 @@
 		}
 	}
 	.horizontal_container{
-		display: flex;
 		padding-left: 2%;
 		padding-right: 2%;
 		padding-bottom: 1%;
@@ -65,15 +55,18 @@
 		#FC2 {transform: translateX(5%);}
 		#FC3 {transform: translateX(10%);}
 		#left_container {
-			height: 100%;
-			width: 32.5%;
+			display: inline-block;
+			height: auto;
+			width: 355px;
 			.feature_container{
 				img {padding-right: 1%;}
 			}
 		}
 		#middle_container {
+			display: inline-block;
 			height: 95%;
-			width: 35%;
+			height: auto;
+			width: 395px;
 			overflow: visible;
 			.features_octopus {
 				width: auto;
@@ -102,8 +95,9 @@
 			}
 		}
 		#right_container {
-			height: 100%;
-			width: 32.5%;
+			display: inline-block;
+			height: auto;
+			width: 360px;
 			scale: -1 1;
 			.feature_container{
 				img {padding-left: 1%;scale: -1 1;}

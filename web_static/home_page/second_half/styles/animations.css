@@ -1,10 +1,6 @@
 @keyframes feature_container_anm {
 	0% {
-		transform: scale(0, .05);
-	}
-
-	50% {
-		transform: scale(1, .05);
+		transform: scale(1, 1);
 	}
 }
 
@@ -113,5 +109,25 @@
 	}
 	100% {
 		transform: rotate(-360deg);
+	}
+}
+
+@keyframes animateWaves {
+	0% {
+		background-position-x: 1000px;
+	}
+
+	100% {
+		background-positon-x: 0px;
+	}
+}
+
+@keyframes animate {
+	0% {
+		background-position-x: -1000px;
+	}
+
+	100% {
+		background-positon-x: 0px;
 	}
 }

@@ -15,17 +15,21 @@
 	<link rel="stylesheet" type="text/css" href="second_half/styles/security_check.css">
 	<link rel="stylesheet" type="text/css" href="second_half/styles/animations.css">
 	<link rel="stylesheet" type="text/css" href="second_half/styles/latest_news.css">
+	<link rel="stylesheet" type="text/css" href="second_half/styles/our_team.css">
 	<script src="second_half/app.js"></script>
 </head>
 
 <!--Home page - Second half-->
 <div id="HM_SH">
+	<!--Scroll up button-->
+	<button onclick="scrollUp()" id="scrollUp_button">Scroll up</button>
+
 	<!--Security check search and results-->
 	<section id="security_check">
 		<div id="security_check_search">
 			<p class="search_title">Website Security Check - SOS</p>
 			<form class="input_container">
-				<input class="input" type="text" placeholder="Website domain">
+				<input id="security_check_input" type="text" placeholder="Website domain">
 				<input id="search_button" type="button" value="" onclick="security_check_submit()">
 			</form>
 		</div>
@@ -35,48 +39,67 @@
 			<div class="dash three"></div>
 			<div class="dash four"></div>
 		</div>
-		<div id="security_check_results"></div>
+		<div id="security_check_results">
+			<table id="security_results_table">
+				<caption>Security check results:</caption>
+				<thead>
+					<tr>
+						<th scope="col">Genre</th>
+						<th scope="col">Title</th>
+						<th scope="col">Description</th>
+						<th scope="col">ID</th>
+						<th scope="col">Threat level</th>
+					</tr>
+				</thead>
+				<tfoot>
+					<tr>
+						<th colspan="2">Results length:</th>
+						<td colspan="3" id="results_length"></td>
+					</tr>
+				</tfoot>
+			</table>
+		</div>
 	</section>
 	
 	<!--Latest News-->
 	<section id="latest_news_container">
+		<p class="title_1">Latest News</p>
 		<li>
-			<h2>01</h2>
-			<h3>Title 1</h3>
-			<p>
+			<h2>ML</h2>
+			<h3>Malware</h3>
+			<p id="latest_news_text_1">
 				Lorem Ipsum is simply dummy text of the printing and typesetting
 				industry. Lorem Ipsum has been the industry's standard dummy text ever
 				since the 1500s.
 			</p>
-			<button>Read more</button>
+			<button onclick="latest_news(1)">Read more</button>
 		</li>
 		<li>
-			<h2>02</h2>
-			<h3>Title 2</h3>
-			<p>
-				When an unknown printer took a galley of type and scrambled it to make
-				a type specimen book. It has survived not only five centuries.
+			<h2>DD</h2>
+			<h3>DDoS</h3>
+			<p id="latest_news_text_2">
+				A denial-of-service (DoS) attack is designed to overwhelm the resources of a system to the point where it is unable to
+				reply to legitimate service requests.
 			</p>
-			<button>Read more</button>
+			<button onclick="latest_news(2)">Read more</button>
 		</li>
 		<li>
-			<h2>03</h2>
-			<h3>Title 3</h3>
-			<p>
-				But also the leap into electronic typesetting, remaining essentially
-				unchanged. It was popularised in the 1960s.
+			<h2>PH</h2>
+			<h3>Phishing</h3>
+			<p id="latest_news_text_3">
+				A phishing attack occurs when a malicious actor sends emails that seem to be coming from trusted, legitimate sources in
+				an attempt to grab sensitive information from the target.
 			</p>
-			<button>Read more</button>
+			<button onclick="latest_news(3)">Read more</button>
 		</li>
 		<li>
-			<h2>04</h2>
-			<h3>Title 4</h3>
-			<p>
-				With the release of Letraset sheets containing Lorem Ipsum passages,
-				and more recently with desktop publishing software like Aldus PageMaker
-				including versions of Lorem Ipsum.
+			<h2>MI</h2>
+			<h3>MITM</h3>
+			<p id="latest_news_text_4">
+				Man-in-the-middle (MITM) types of cyber attacks refer to breaches in cybersecurity that make it possible for an attacker
+				to eavesdrop on the data sent back and forth between two people, networks, or computers.
 			</p>
-			<button>Read more</button>
+			<button onclick="latest_news(4)">Read more</button>
 		</li>
 	</section>
 
@@ -130,4 +153,53 @@
 			</div>
 		</div>
 	</section>
+
+	<!--Our Team-->
+	<section id="our_team_container">
+		<p class="title_1">Meet our team</p>
+		<img src="second_half/styles/images/our-team.png">
+		<div id="team_content">
+			<div class="team_member">
+				<h3 class="title">Mahmoud Azhary</h3>
+				<span class="post">web developer</span>
+				<ul class="social">
+					<li><a href="https://www.linkedin.com/in/mahmoud-alazhary/" target="_blank"><img src="second_half/styles/images/linkedin-round-svgrepo-com.svg"></a></li>
+					<li><a href="https://github.com/Mahmoud-Alazhary" target="_blank"><img src="second_half/styles/images/github-color-svgrepo-com.svg"></a></li>
+				</ul>
+			</div>
+			<div class="team_member">
+				<h3 class="title">Abdullrahmen Ahmed</h3>
+				<span class="post">web developer</span>
+				<ul class="social">
+					<li><a href="https://www.linkedin.com/in/abdullrahmen/" target="_blank"><img src="second_half/styles/images/linkedin-round-svgrepo-com.svg"></a></li>
+					<li><a href="https://github.com/Abdullrahmen" target="_blank"><img src="second_half/styles/images/github-color-svgrepo-com.svg"></a></li>
+				</ul>
+			</div>
+			<div class="team_member">
+				<h3 class="title">Abdullrahmen Samy</h3>
+				<span class="post">web developer</span>
+				<ul class="social">
+					<li><a href="https://www.linkedin.com/in/samyabdelrahman/" target="_blank"><img src="second_half/styles/images/linkedin-round-svgrepo-com.svg"></a></li>
+					<li><a href="https://github.com/ASamyAbdelrahman" target="_blank"><img src="second_half/styles/images/github-color-svgrepo-com.svg"></a></li></ul>
+			</div>
+		</div>
+	</section>
+</div>
+<!--Footer-->
+<footer class="footer">
+	<div class="waves">
+		<div class="wave" id="wave1"></div>
+		<div class="wave" id="wave2"></div>
+		<div class="wave" id="wave3"></div>
+		<div class="wave" id="wave4"></div>
+	</div>
+	<ul class="menu">
+		<li class="menu_item"><a class="menu_link" href="#">Home</a></li>
+		<li class="menu_item"><a class="menu_link" href="#latest_news_container">Latest news</a></li>
+		<li class="menu_item"><a class="menu_link" href="#octo_features_container">Services</a></li>
+		<li class="menu_item"><a class="menu_link" href="#our_team_container">Team</a></li>
+		<li class="menu_item"><a class="menu_link" href="#our_team_container">Contact</a></li>
+	</ul>
+	<p>&copy;2024 SecureOctoShelters | All Rights Reserved</p>
+</footer>
 </html>
