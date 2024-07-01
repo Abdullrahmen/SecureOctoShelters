@@ -1,0 +1,116 @@
+#our_team_container{
+	width: 100%;
+	height: auto;
+	margin-bottom: 3vh;
+	padding-bottom: 15vh;
+	padding-top: 0%;
+	/* box-shadow: 10px 10px 10px 5px #af7acc; */
+	border-radius: 100%;
+	.title_1{
+		padding-top: 2%;
+		padding-bottom: 0%;
+		margin-bottom: 0%;
+		padding-left: 0%;
+	}
+	img {
+		width: 50%;
+		display: block;
+		margin-left: 24%;
+	}
+	#team_content{
+		display: flex;
+		transition: all 0.5s ease 0s;
+		width: 65%;
+		margin-left: 17%;
+		.team_member{
+			width: 30%;
+			height: auto;
+			background: #c9a4dc;
+			padding: 4% 1%;
+			margin-left: 2.5%;
+			margin-right: 2%;
+			border-left: 5px solid #3b4119;
+			box-shadow: 0 15px 25px 0 rgba(3, 7, 15, 0.1);
+			position: relative;
+			transition: all 0.5s ease 0s;
+			&:hover{
+				background: #5e3448;
+			}
+			.title {
+					font-size: 130%;
+					font-weight: 700;
+					color: #5e3448;
+					color: #1d1a15;
+					text-transform: capitalize;
+					text-align: center;
+					margin: 0;
+					transition: all 0.5s ease 0s;
+				}
+			.post {
+				display: block;
+				font-size: 15px;
+				font-style: italic;
+				color: #fb6648;
+				text-transform: capitalize;
+				height: 0;
+				opacity: 0;
+				transform: scale(0);
+				transition: all 0.5s ease 0s;
+			}
+			.social{
+				list-style: none;
+				padding: 0;
+				margin: 0;
+				width: 100%;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				opacity: 0;
+				transform: translateY(-60%);
+				transition: all 0.5s ease 0s;
+				li {
+					display: inline-block;
+					a {
+						display: block;
+						width: 40px;
+						height: 40px;
+						border-radius: 50%;
+						background: #ecdfbd;
+						font-size: 17px;
+						font-weight: 700;
+						line-height: 40px;
+						color: #5e3448;
+						transition: all 0.5s ease 0s;
+						img{
+							width: 65%;
+							height: 100%;
+							margin-right: auto;
+							margin-left: auto;
+							display: block;
+						}
+						&:hover {
+							color: #ecdfbd;
+							background: #5e3448;
+						}
+					}
+				}
+			}
+			
+			&:hover {
+				.title {
+						color: #ecdfbd;
+						margin-bottom: 10px;
+				}
+				.post {
+					height: 40px;
+					opacity: 1;
+					transform: scale(1);
+				}
+				.social {
+					transform: translateY(50%);
+					opacity: 1;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,109 @@
+#octo_features_container{
+	display: grid;
+	margin-left: 4%;
+	margin-right: 4%;
+	margin-top: 5%;
+	margin-bottom: 7vh;
+	height: auto;
+	width: auto;
+	overflow: visible;
+	.title_1 {
+			&.animation {
+				@media (prefers-reduced-motion: no-preference) {
+					animation: title_1_anm 3s infinite;
+				}
+			}
+		}
+	
+	.feature_container {
+		margin-top: 2.5%;
+		flex-wrap: wrap;
+		margin-bottom: 2.5%;
+		border-radius: 100vw;
+		border: .25vw solid #1d002c;
+		display: inline-flex;
+		height: 26%;
+		overflow: visible;
+		background-color: #1d002c;
+		background-image: linear-gradient(to right, #331054, #331941);
+		transition: scale 0.2s;
+		img {
+			width: 25%;
+		}
+		p {
+			color: antiquewhite;
+			margin-top: 1.5%;
+			width: 70%;
+			font-size: 125%;
+			word-break: keep-all;
+		}
+		&.animation {
+			@media (prefers-reduced-motion: no-preference) {
+				animation: feature_container_anm 0.75s 1;
+			}
+		}
+		&:hover{
+			scale: 1.2;
+		}
+	}
+	.horizontal_container{
+		padding-left: 2%;
+		padding-right: 2%;
+		padding-bottom: 1%;
+		height: 90%;
+		#FC1 {transform: translateX(10%);}
+		#FC2 {transform: translateX(5%);}
+		#FC3 {transform: translateX(10%);}
+		#left_container {
+			display: inline-block;
+			height: auto;
+			width: 355px;
+			.feature_container{
+				img {padding-right: 1%;}
+			}
+		}
+		#middle_container {
+			display: inline-block;
+			height: 95%;
+			height: auto;
+			width: 395px;
+			overflow: visible;
+			.features_octopus {
+				width: auto;
+				max-width: 100%;
+				max-height: 100%;
+				height: auto;
+				opacity: 0;
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+				margin-bottom: auto;
+				margin-top: auto;
+				transform: translateY(3%);
+				&:hover {
+					@media (prefers-reduced-motion: no-preference) {
+						transform: translateY(8%);
+					}
+				}
+				&.animation {
+					@media (prefers-reduced-motion: no-preference) {
+						opacity: 0;
+						transition: opacity 1.5s ease, transform 1.5s ease;
+						opacity: 1;
+					}
+				}
+			}
+		}
+		#right_container {
+			display: inline-block;
+			height: auto;
+			width: 360px;
+			scale: -1 1;
+			.feature_container{
+				img {padding-left: 1%;scale: -1 1;}
+				p {text-align: right;scale: -1 1;}
+			}
+		}
+	}
+	
+}

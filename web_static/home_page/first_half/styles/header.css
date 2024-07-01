@@ -1,0 +1,132 @@
+header {
+	right: 0;
+	top: 0;
+	display: flex;
+	padding: 0 5%;
+	margin: 0 0;
+	align-items: center;
+	z-index: 10000;
+	width: 90%;
+	position: fixed;
+	height: 12%;
+	transition: all 0.7s ease;
+	background-color: #171122;
+	backdrop-filter: blur(30px);
+	box-shadow: 0px 0px 30px rgba(227, 228, 237, 0.37);
+	border: 2px solid rgba(255, 255, 255, 0.18);
+	border-right: 0px;
+	border-left: 0px;
+	border-top: 0px;
+}
+
+header.sticky {
+	padding: 5px 14%;
+	background: transparent;
+	backdrop-filter: blur(25px);
+}
+
+.logo {
+	height: 100%;
+	width: 30%;
+	display: flex;
+	align-items: center;
+}
+
+.logo img {
+	max-width: 20%;
+	margin-right: 1%;
+	width: 100%;
+	height: 80%;
+	object-fit: contain;
+	transition: all 0.7s ease;
+}
+
+.logo img:hover {
+	transform: scale(1.07);
+}
+
+.logo span {
+	width: 75%;
+	text-decoration: none;
+	font-size: 130%;
+	font-weight: 500;
+	color: #c1bac6;
+	transition: all 0.6s ease;
+}
+
+.logo span:hover {
+	color: #ffffff;
+	text-shadow: 0 0 10px #c1bac6;
+}
+
+.menu-list{
+	display: inline-flex;
+	height: 100%;
+	width: 45%;
+	margin-left: 0%;
+	justify-content: center;
+}
+.menu-list a {
+	display: inline-block;
+	font-size: 125%;
+	height: fit-content;
+	margin: auto;
+	text-decoration: none;
+	margin-right: 2%;
+	margin-left: 2%;
+	font-weight: 500;
+	color: #c1bac6;
+	transition: all 0.7s ease;
+}
+
+.menu-list a:hover {
+	color: #ffffff;
+	text-shadow: 0 0 10px #c1bac6;
+}
+
+.menu-list a.active {
+	color: #ffffff;
+	text-shadow: 0 0 10px #c1bac6;
+}
+
+.menu-right {
+	width: 20%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+.sign-up,.log-in {
+	display: inline-block;
+	width: 35%;
+	height: 30%;
+	font-size: 115%;
+	margin: 0% 5%;
+	padding: 5% 2.5%;
+	font-weight: 500;
+	border-radius: 23%;
+	text-decoration: none;
+}
+
+.log-in {
+	background: linear-gradient(45deg, #433260 0%, #c682dd 100%);
+	color: #ffffff;
+	text-shadow: 0 0 10px #ffffff;
+	transition: all 0.7s ease;
+}
+
+.log-in:hover {
+	transform: scale(1.07);
+}
+
+.sign-up {	
+	color: #ffffff;
+	border: 2px solid #c1bac6;
+	text-shadow: 0 0 10px #ffffff;
+	transition: all 0.7s ease;
+}
+
+.sign-up:hover {
+	letter-spacing: 1px;
+}

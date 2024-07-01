@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+
+	<!--The virtual viewport matches the device dimensions-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Home - Secure Octopus Shelters</title>
+
+	<!--Links and scripts-->
+	<link rel="stylesheet" type="text/css" href="second_half/styles/common.css">
+	<link rel="stylesheet" type="text/css" href="second_half/styles/footer.css">
+	<link rel="stylesheet" type="text/css" href="second_half/styles/octopus_features.css">
+	<link rel="stylesheet" type="text/css" href="second_half/styles/security_check.css">
+	<link rel="stylesheet" type="text/css" href="second_half/styles/animations.css">
+	<link rel="stylesheet" type="text/css" href="second_half/styles/latest_news.css">
+	<link rel="stylesheet" type="text/css" href="second_half/styles/our_team.css">
+	<script src="second_half/app.js"></script>
+</head>
+
+<!--Home page - Second half-->
+<div id="HM_SH">
+	<!--Scroll up button-->
+	<button onclick="scrollUp()" id="scrollUp_button">Scroll up</button>
+
+	<!--Security check search and results-->
+	<section id="security_check">
+		<div id="security_check_search">
+			<p class="search_title">Website Security Check - SOS</p>
+			<form class="input_container">
+				<input id="security_check_input" type="text" placeholder="Website domain">
+				<input id="search_button" type="button" value="" onclick="security_check_submit()">
+			</form>
+		</div>
+		<div id="security_check_loading">
+			<div class="dash one"></div>
+			<div class="dash two"></div>
+			<div class="dash three"></div>
+			<div class="dash four"></div>
+		</div>
+		<div id="security_check_results">
+			<table id="security_results_table">
+				<caption>Security check results:</caption>
+				<thead>
+					<tr>
+						<th scope="col">Genre</th>
+						<th scope="col">Title</th>
+						<th scope="col">Description</th>
+						<th scope="col">ID</th>
+						<th scope="col">Threat level</th>
+					</tr>
+				</thead>
+				<tfoot>
+					<tr>
+						<th colspan="2">Results length:</th>
+						<td colspan="3" id="results_length"></td>
+					</tr>
+				</tfoot>
+			</table>
+		</div>
+	</section>
+	
+	<!--Latest News-->
+	<section id="latest_news_container">
+		<p class="title_1">Latest News</p>
+		<li>
+			<h2>ML</h2>
+			<h3>Malware</h3>
+			<p id="latest_news_text_1">
+				Lorem Ipsum is simply dummy text of the printing and typesetting
+				industry. Lorem Ipsum has been the industry's standard dummy text ever
+				since the 1500s.
+			</p>
+			<button onclick="latest_news(1)">Read more</button>
+		</li>
+		<li>
+			<h2>DD</h2>
+			<h3>DDoS</h3>
+			<p id="latest_news_text_2">
+				A denial-of-service (DoS) attack is designed to overwhelm the resources of a system to the point where it is unable to
+				reply to legitimate service requests.
+			</p>
+			<button onclick="latest_news(2)">Read more</button>
+		</li>
+		<li>
+			<h2>PH</h2>
+			<h3>Phishing</h3>
+			<p id="latest_news_text_3">
+				A phishing attack occurs when a malicious actor sends emails that seem to be coming from trusted, legitimate sources in
+				an attempt to grab sensitive information from the target.
+			</p>
+			<button onclick="latest_news(3)">Read more</button>
+		</li>
+		<li>
+			<h2>MI</h2>
+			<h3>MITM</h3>
+			<p id="latest_news_text_4">
+				Man-in-the-middle (MITM) types of cyber attacks refer to breaches in cybersecurity that make it possible for an attacker
+				to eavesdrop on the data sent back and forth between two people, networks, or computers.
+			</p>
+			<button onclick="latest_news(4)">Read more</button>
+		</li>
+	</section>
+
+	<!--Octopus features-->
+	<section id="octo_features_container">
+		<p class="title_1">8 Arms of Protection</p>
+
+		<div class="horizontal_container">
+			<div id="left_container" class="horizontal_element">
+				<div class="feature_container" id="FC1">
+					<img src="second_half/styles/images/firewall-svgrepo-com.svg">
+					<p><b>Network Firewalls</b><br><font size="-1">
+						Real-time firewall threat detection service safeguards network integrity.
+					</font></p>
+				</div>
+				<div class="feature_container" id="FC2">
+					<img src="second_half/styles/images/network-transmit-svgrepo-com.svg">
+					<p><b>Network behavior</b><br><font size="-1">
+						Network behavior anomaly detection.
+					</font></p>
+				</div>
+				<div class="feature_container" id="FC3">
+					<img src="second_half/styles/images/security-scan-svgrepo-com.svg">
+					<p><b>Malware Analyst</b><br><font size="-1">
+						Malware detection service safeguards websites from malicious software.
+					</font></p>
+				</div>
+			</div>
+			<div id="middle_container" class="horizontal_element">
+				<img class="features_octopus" src="second_half/styles/images/octopus_features.png">
+			</div>
+			<div id="right_container" class="horizontal_element">
+				<div class="feature_container" id="FC1">
+					<img src="second_half/styles/images/ddos-protection-svgrepo-com.svg">
+					<p><b>DDoS mitigation</b><br><font size="-1">
+						DDoS mitigation service protects websites from malicious traffic.</font></p>
+				</div>
+				<div class="feature_container" id="FC2">
+					<img src="second_half/styles/images/router-svgrepo-com.svg">
+					<p><b>SD-WAN Security</b><br><font size="-1">
+						SD-WAN security service enhances website protection and performance.
+					</font></p>
+				</div>
+				<div class="feature_container" id="FC3">
+					<img src="second_half/styles/images/network-wired-svgrepo-com.svg">
+					<p><b>Network Access control</b><br><font size="-1">
+						Network access control service secures website connections and data.
+					</font>
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!--Our Team-->
+	<section id="our_team_container">
+		<p class="title_1">Meet our team</p>
+		<img src="second_half/styles/images/our-team.png">
+		<div id="team_content">
+			<div class="team_member">
+				<h3 class="title">Mahmoud Azhary</h3>
+				<span class="post">web developer</span>
+				<ul class="social">
+					<li><a href="https://www.linkedin.com/in/mahmoud-alazhary/" target="_blank"><img src="second_half/styles/images/linkedin-round-svgrepo-com.svg"></a></li>
+					<li><a href="https://github.com/Mahmoud-Alazhary" target="_blank"><img src="second_half/styles/images/github-color-svgrepo-com.svg"></a></li>
+				</ul>
+			</div>
+			<div class="team_member">
+				<h3 class="title">Abdullrahmen Ahmed</h3>
+				<span class="post">web developer</span>
+				<ul class="social">
+					<li><a href="https://www.linkedin.com/in/abdullrahmen/" target="_blank"><img src="second_half/styles/images/linkedin-round-svgrepo-com.svg"></a></li>
+					<li><a href="https://github.com/Abdullrahmen" target="_blank"><img src="second_half/styles/images/github-color-svgrepo-com.svg"></a></li>
+				</ul>
+			</div>
+			<div class="team_member">
+				<h3 class="title">Abdullrahmen Samy</h3>
+				<span class="post">web developer</span>
+				<ul class="social">
+					<li><a href="https://www.linkedin.com/in/samyabdelrahman/" target="_blank"><img src="second_half/styles/images/linkedin-round-svgrepo-com.svg"></a></li>
+					<li><a href="https://github.com/ASamyAbdelrahman" target="_blank"><img src="second_half/styles/images/github-color-svgrepo-com.svg"></a></li></ul>
+			</div>
+		</div>
+	</section>
+</div>
+<!--Footer-->
+<footer class="footer">
+	<div class="waves">
+		<div class="wave" id="wave1"></div>
+		<div class="wave" id="wave2"></div>
+		<div class="wave" id="wave3"></div>
+		<div class="wave" id="wave4"></div>
+	</div>
+	<ul class="menu">
+		<li class="menu_item"><a class="menu_link" href="#">Home</a></li>
+		<li class="menu_item"><a class="menu_link" href="#latest_news_container">Latest news</a></li>
+		<li class="menu_item"><a class="menu_link" href="#octo_features_container">Services</a></li>
+		<li class="menu_item"><a class="menu_link" href="#our_team_container">Team</a></li>
+		<li class="menu_item"><a class="menu_link" href="#our_team_container">Contact</a></li>
+	</ul>
+	<p>&copy;2024 SecureOctoShelters | All Rights Reserved</p>
+</footer>
+</html>

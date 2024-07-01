@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+
+	<!--The virtual viewport matches the device dimensions-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Home - Secure Octopus Shelters</title>
+
+	<!--Links and scripts-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<script>
+		$(function () {
+			$("#secondHalf").load("second_half/second_half.html");
+			$("#firstHalf").load("first_half/first_half.html");
+		});
+	</script>
+	<link rel="stylesheet" type="text/css" href="body.css">
+
+</head>
+<body>
+	<div id="firstHalf"></div>
+	<div id="secondHalf"></div>
+</body>
+</html>
