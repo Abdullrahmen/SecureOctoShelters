@@ -1,14 +1,14 @@
 header {
 	right: 0;
 	top: 0;
-	display: flex;
+	display: inline-flex;
 	padding: 0 5%;
 	margin: 0 0;
 	align-items: center;
-	z-index: 10000;
+	z-index: 100;
 	width: 90%;
 	position: fixed;
-	height: 12%;
+	height: 12vh;
 	transition: all 0.7s ease;
 	background-color: #171122;
 	backdrop-filter: blur(30px);

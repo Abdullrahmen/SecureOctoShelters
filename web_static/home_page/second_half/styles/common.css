@@ -9,12 +9,10 @@ html {
 	padding-top: 0%;
 	padding-right: 3%;
 	padding-bottom: 0%;
-	margin: 0% 0%;
-	background-image: linear-gradient(#1d002c, #331941);
+	background-image: linear-gradient(#13111c, #331941);
 	font-family: 'Raleway', sans-serif;
 }
 .title_1 {
-	height: 7%;
 	width: auto;
 	font-size: 200%;
 	font-weight: 600;
@@ -22,6 +20,7 @@ html {
 	color: #d5ccda;
 	margin-bottom: 1%;
 	margin-top: 0%;
+	padding-top: 0;
 }
 
 #scrollUp_button {
