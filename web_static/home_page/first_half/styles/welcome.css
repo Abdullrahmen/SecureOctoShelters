@@ -1,3 +1,14 @@
+@keyframes welcome-image_anm {
+	50% {
+		translate: 0 -2.5%;
+	}
+}
+
+@keyframes welcome-SOS_anm {
+	50% {
+		text-shadow: 0px 0px 6px #ffffff;
+	}
+}
 #welcome {
 	position: relative;
 	padding: 1% 0 0 0;
@@ -6,14 +17,17 @@
 	height: 88%;
 	display: flex;
 	#welcome-image{
+		@media (prefers-reduced-motion: no-preference) {
+			animation: welcome-image_anm  3s infinite;
+		}
 		position: absolute;
 		z-index: 0;
 		display: block;
 		width: 70%;
-		margin: 0 0 0 25%;
+		margin: 0 0 0 27%;
 		padding: 0;
 		img{
-			width: 107%;
+			width: 104%;
 			transform: translateX(-2%);
 		}
 		overflow: visible;
@@ -24,6 +38,7 @@
 		text-align: center;
 		padding: 7% 0 0 1%;
 		position: absolute;
+		
 		h2, h3{
 			font-weight: 600;
 			text-shadow: 0 0 4px #8530a5;
@@ -31,10 +46,14 @@
 		}
 		h3 {
 			margin: 0;
-			font-size: 120%;
+			font-size: 125%;
+			/* font-size: 1.5vw; */
 			text-align: center;
 		}
 		h2 {
+			@media (prefers-reduced-motion: no-preference) {
+					animation: welcome-SOS_anm 1.5s infinite;
+			}
 			font-size: 400%;
 			margin: 0;
 			text-align: center;
