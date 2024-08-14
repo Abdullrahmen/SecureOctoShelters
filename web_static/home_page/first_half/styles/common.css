@@ -1,0 +1,14 @@
+#HM_FH {
+	padding: 12vh 0 0 0;
+	margin: 0 0 0 0;
+	width: 100%;
+	height: 85vh;
+	display: block;
+	font-family: "Syne", sans-serif;
+	list-style: none;
+	box-sizing: border-box;
+	text-decoration: none;
+	background-image: url("images/welcome-bg.jpg");
+	background-size: cover;
+	overflow: visible;
+}
